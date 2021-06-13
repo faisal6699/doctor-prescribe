@@ -1,0 +1,338 @@
+<div class="p-grid main-content">
+    <div class="p-col-12 p-md-4">
+        <p-fieldset legend="Fixed Restorations" >
+            <div class="p-fluid p-formgrid p-grid main-div">
+                <div class="p-col-2">
+                    <p for="shade">Shade</p>
+
+                </div>
+
+                <div class="p-field p-col-10">
+                    <input type="text" pInputText class="input-form p-mt-1" />
+                </div>
+
+            </div>
+
+            <div class="p-fluid p-formgrid p-grid main-div">
+                
+
+                <!-- <div class="p-field p-col-10  ponitic-div">
+
+                  
+                </div> -->
+
+                <div class="p-col-2">
+                    <p for="shade">Occlusal stain</p>
+                </div>
+
+                <div class="p-field p-col-10  occlusal-div">
+
+                    <div class="occlusal-content">
+
+                        <p-dropdown [options]="occlusal" [(ngModel)]="selectedOcclusal" optionLabel="name" placeholder="select occlusal type" ></p-dropdown>
+                    </div>
+
+                    <!-- <div class="">
+                        <div class="p-d-flex p-ai-center p-jc-between occlusal-content occlusal-content1">
+                            <div class="p-d-flex p-ai-center">
+                              
+                                <label>None</label>
+                            </div>
+                            <p-checkbox class="check-box" name="groupname" value="val1"></p-checkbox>
+                        </div>
+
+                        <div class="p-d-flex p-ai-center p-jc-between occlusal-content">
+                            <div class="p-d-flex p-ai-center">
+                                <label>Light</label>
+                            </div>
+                            <p-checkbox class="check-box" name="groupname" value="val1"></p-checkbox>
+                        </div>
+                        <div class="p-d-flex p-ai-center p-jc-between occlusal-content">
+                            <div class="p-d-flex p-ai-center">
+                                
+                                <label>Medium</label>
+                            </div>
+                            <p-checkbox class="check-box" name="groupname" value="val1"></p-checkbox>
+                        </div>
+                        <div class="p-d-flex p-ai-center p-jc-between occlusal-content">
+                            <div class="p-d-flex p-ai-center">
+                              
+                                <label>Dark</label>
+                            </div>
+                            <p-checkbox class="check-box" name="groupname" value="val1"></p-checkbox>
+                        </div>
+                       
+
+                    </div> -->
+                </div>
+
+                <div class="p-col-3">
+                    <span for="shade">Embrasures</span>
+                </div>
+
+                <div class="p-field p-col-9  embrasures-div">
+
+                    <div class="embrasures-content">
+                        <p-dropdown [options]="embrasures" [(ngModel)]="selectedEmbrasures" optionLabel="name" placeholder="select embrasures type" ></p-dropdown>
+                    </div>
+
+                   
+                </div>
+
+                <div class="p-col-2">
+                    <span for="shade">Buccal margin</span>
+                </div>
+
+                <div class="p-field p-col-10  embrasures-div">
+
+                    <div class="embrasures-content">
+                        <p-dropdown [options]="buccal" [(ngModel)]="selectedBuccal" optionLabel="name" placeholder="select buccal type" ></p-dropdown>
+                    </div>
+
+                   
+                </div>
+
+                <div class="p-col-12  ponitic-div">
+                    <!-- <p for="shade">Pontic Design </p> -->
+                    <p-fieldset legend="Pontic Design" toggleable='true' collapsed='true'>
+                        <div class="">
+                            <div class="p-d-flex p-ai-center p-jc-between ponitic-content">
+                                <div class="p-d-flex p-ai-center">
+                                  <img src="assets/conical_pon.jpg">
+                                    <label>Conical ponitic</label>
+                                </div>
+                                <p-checkbox class="check-box" name="groupname" value="val1"></p-checkbox>
+                            </div>
+    
+                            <div class="p-d-flex p-ai-center p-jc-between ponitic-content">
+                                <div class="p-d-flex p-ai-center">
+                                    <img src="assets/ovate_pon.png">
+                                    <label>Ovate ponitic</label>
+                                </div>
+                                <p-checkbox class="check-box" name="groupname" value="val1"></p-checkbox>
+                            </div>
+                            <div class="p-d-flex p-ai-center p-jc-between ponitic-content">
+                                <div class="p-d-flex p-ai-center">
+                                    <img src="assets/ridge_pon.png">
+                                    <label>Ridge lap pontic</label>
+                                </div>
+                                <p-checkbox class="check-box" name="groupname" value="val1"></p-checkbox>
+                            </div>
+                            <div class="p-d-flex p-ai-center p-jc-between ponitic-content">
+                                <div class="p-d-flex p-ai-center">
+                                    <img src="assets/mod_ridge_pon.png">
+                                    <label>Modified ridge lap ponitic</label>
+                                </div>
+                                <p-checkbox class="check-box" name="groupname" value="val1"></p-checkbox>
+                            </div>
+                            <div class="p-d-flex p-ai-center p-jc-between ponitic-content">
+                                <div class="p-d-flex p-ai-center">
+                                    <img src="assets/saddle_pon.png">
+                                    <label>Saddle pontic</label>
+                                </div>
+                                <p-checkbox class="check-box" name="groupname" value="val1"></p-checkbox>
+                            </div>
+                            <div class="p-d-flex p-ai-center p-jc-between ponitic-content">
+                                <div class="p-d-flex p-ai-center">
+                                    <img src="assets/mod_sphero_pon.png">
+                                    <label>Spheroidal ponitic or Modified spheroidal ponitic</label>
+                                </div>
+                                <p-checkbox class="check-box" name="groupname" value="val1"></p-checkbox>
+                            </div>
+    
+                        </div>
+                    </p-fieldset>
+
+                </div>
+
+                <div class="p-col-6">
+
+                    <p-fieldset legend="All ceramic" toggleable='true' collapsed='true'>
+                        <div class="ceramic-div">
+                            <div class="p-d-flex p-ai-center p-jc-between ceramic-content">
+                                <div class="p-d-flex p-ai-center">
+                                  
+                                    <label>3M EPSE LAVA</label>
+                                </div>
+                                <p-checkbox class="check-box" name="groupname" value="val1"></p-checkbox>
+                            </div>
+    
+                            <div class="p-d-flex p-ai-center p-jc-between ceramic-content">
+                                <div class="p-d-flex p-ai-center">
+                                   
+                                    <label>IPS e-max pressed</label>
+                                </div>
+                                <p-checkbox class="check-box" name="groupname" value="val1"></p-checkbox>
+                            </div>
+                            <div class="p-d-flex p-ai-center p-jc-between ceramic-content">
+                                <div class="p-d-flex p-ai-center">
+                                    
+                                    <label>IPS e-max CAD</label>
+                                </div>
+                                <p-checkbox class="check-box" name="groupname" value="val1"></p-checkbox>
+                            </div>
+                            <div class="p-d-flex p-ai-center p-jc-between ceramic-content">
+                                <div class="p-d-flex p-ai-center">
+                                    
+                                    <label>IPS e-max ZirCAD</label>
+                                </div>
+                                <p-checkbox class="check-box" name="groupname" value="val1"></p-checkbox>
+                            </div>
+                            <div class="p-d-flex p-ai-center p-jc-between ceramic-content">
+                                <div class="p-d-flex p-ai-center">
+                                    
+                                    <label>Procelain fused to zirconia</label>
+                                </div>
+                                <p-checkbox class="check-box" name="groupname" value="val1"></p-checkbox>
+                            </div>
+                            <div class="p-d-flex p-ai-center p-jc-between ceramic-content">
+                                <div class="p-d-flex p-ai-center">
+                                    
+                                    <label>Full Contour zirconia</label>
+                                </div>
+                                <p-checkbox class="check-box" name="groupname" value="val1"></p-checkbox>
+                            </div>
+                            <div class="p-d-flex p-ai-center p-jc-between ceramic-content">
+                                <div class="p-d-flex p-ai-center">
+                                    
+                                    <label>Prep veneer</label>
+                                </div>
+                                <p-checkbox class="check-box" name="groupname" value="val1"></p-checkbox>
+                            </div>
+
+                            <div class="p-d-flex p-ai-center p-jc-between ceramic-content">
+                                <div class="p-d-flex p-ai-center">
+                                    
+                                    <label>Non prep veneer</label>
+                                </div>
+                                <p-checkbox class="check-box" name="groupname" value="val1"></p-checkbox>
+                            </div>
+    
+                        </div>
+                    </p-fieldset>
+                </div>
+
+                <div class="p-col-6">
+
+                    <p-fieldset legend="PFM"  toggleable='true' collapsed='true'>
+                        <div class="ceramic-div">
+                            <div class="p-d-flex p-ai-center p-jc-between ceramic-content">
+                                <div class="p-d-flex p-ai-center">
+                                  
+                                    <label>Non-Precious</label>
+                                </div>
+                                <p-checkbox class="check-box" name="groupname" value="val1"></p-checkbox>
+                            </div>
+    
+                            <div class="p-d-flex p-ai-center p-jc-between ceramic-content">
+                                <div class="p-d-flex p-ai-center">
+                                   
+                                    <label>Non-Precious(Ni+Be free)</label>
+                                </div>
+                                <p-checkbox class="check-box" name="groupname" value="val1"></p-checkbox>
+                            </div>
+                            <div class="p-d-flex p-ai-center p-jc-between ceramic-content">
+                                <div class="p-d-flex p-ai-center">
+                                    
+                                    <label>Semi-Precious</label>
+                                </div>
+                                <p-checkbox class="check-box" name="groupname" value="val1"></p-checkbox>
+                            </div>
+                            <div class="p-d-flex p-ai-center p-jc-between ceramic-content">
+                                <div class="p-d-flex p-ai-center">
+                                    
+                                    <label>Hign Noble</label>
+                                </div>
+                                <p-checkbox class="check-box" name="groupname" value="val1"></p-checkbox>
+                            </div>
+                           
+    
+                        </div>
+                       
+                    </p-fieldset>
+                </div>
+
+                <div class="p-col-6">
+
+                    <p-fieldset legend="Full cast crown" toggleable='true' collapsed='true'>
+                        <div class="ceramic-div">
+                            <div class="p-d-flex p-ai-center p-jc-between ceramic-content">
+                                <div class="p-d-flex p-ai-center">
+                                  
+                                    <label>Non-Precious</label>
+                                </div>
+                                <p-checkbox class="check-box" name="groupname" value="val1"></p-checkbox>
+                            </div>
+    
+                            <div class="p-d-flex p-ai-center p-jc-between ceramic-content">
+                                <div class="p-d-flex p-ai-center">
+                                   
+                                    <label>Non-Precious(Ni+Be free)</label>
+                                </div>
+                                <p-checkbox class="check-box" name="groupname" value="val1"></p-checkbox>
+                            </div>
+
+                            <div class="p-d-flex p-ai-center p-jc-between ceramic-content">
+                                <div class="p-d-flex p-ai-center">
+                                  
+                                    <label>Non-Precious Gold</label>
+                                </div>
+                                <p-checkbox class="check-box" name="groupname" value="val1"></p-checkbox>
+                            </div>
+                            <div class="p-d-flex p-ai-center p-jc-between ceramic-content">
+                                <div class="p-d-flex p-ai-center">
+                                    
+                                    <label>Semi-Precious White</label>
+                                </div>
+                                <p-checkbox class="check-box" name="groupname" value="val1"></p-checkbox>
+                            </div>
+                            <div class="p-d-flex p-ai-center p-jc-between ceramic-content">
+                                <div class="p-d-flex p-ai-center">
+                                    
+                                    <label>Economy Yellow</label>
+                                </div>
+                                <p-checkbox class="check-box" name="groupname" value="val1"></p-checkbox>
+                            </div>
+                            <div class="p-d-flex p-ai-center p-jc-between ceramic-content">
+                                <div class="p-d-flex p-ai-center">
+                                    
+                                    <label>Noble Yellow</label>
+                                </div>
+                                <p-checkbox class="check-box" name="groupname" value="val1"></p-checkbox>
+                            </div>
+
+                            <div class="p-d-flex p-ai-center p-jc-between ceramic-content">
+                                <div class="p-d-flex p-ai-center">
+                                    
+                                    <label>High Noble Yellow</label>
+                                </div>
+                                <p-checkbox class="check-box" name="groupname" value="val1"></p-checkbox>
+                            </div>
+                           
+    
+                        </div>
+                    </p-fieldset>
+                </div>
+
+
+
+            </div>
+
+
+
+
+        </p-fieldset>
+    </div>
+
+    <div class="p-col-12 p-md-4">
+        <p-fieldset legend="Removable Restorations">
+            Content
+        </p-fieldset>
+    </div>
+
+    <div class="p-col-12 p-md-4">
+        <p-fieldset legend="Instructions">
+            Content
+        </p-fieldset>
+    </div>
+</div>

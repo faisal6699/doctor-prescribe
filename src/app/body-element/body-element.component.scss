@@ -1,0 +1,50 @@
+.main-content{
+    margin: 0 auto;
+    .ponitic-div{
+        // border: 1px solid #7E63AD;
+        padding: 5px;
+
+        .ponitic-content{
+            margin: 15px 0px;
+        }
+        img{
+            width: 50px;
+            margin: 0px 2px;
+            height: 50px;
+        }
+        label{
+            font-size: .8rem;
+        }
+
+        .check-box{
+            margin-right: 5px;
+        }
+    }
+
+    .occlusal-div{
+
+        .occlusal-content{
+            margin: 15px 0px;
+        }
+        label{
+            font-size: 1rem;
+        } 
+    }
+
+    .embrasures-div {
+        .embrasures-content{
+            margin: 0px 0px 15px 0px ;
+        }
+        .check-box{
+            margin-right: 5px;
+        }
+    }
+
+    .ceramic-div{
+        .ceramic-content{
+            margin: 0px 0px 15px 0px ;
+        }
+    }
+    
+}
+
