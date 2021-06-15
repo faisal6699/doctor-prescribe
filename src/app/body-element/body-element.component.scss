@@ -48,3 +48,17 @@
     
 }
 
+
+
+:host{
+    ::ng-deep .tooth-panel{
+        margin: 15px 0px;
+    }
+    ::ng-deep .p-panel-header{
+        // margin: 10px;
+        background-color: #EFF0F1;
+        span{
+            color: #000;
+        }
+    }
+}

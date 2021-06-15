@@ -1,0 +1,35 @@
+.tooth-content-img{
+    width: 30px;
+    height: 30px;
+}
+
+.upper-tooth{
+    border-bottom: 1px solid #4f4f4f;
+    // margin-bottom: 10px;
+    // padding-bottom: 10px;
+    .upper-border{
+        border-right: 1px solid #4f4f4f;
+    }
+    .upper-tooth-left{
+        margin: 10px 0px;
+    }
+    .upper-tooth-right{
+        margin: 10px 0px;
+    }
+}
+
+.lower-tooth{
+    // border-bottom: 1px solid #4f4f4f;
+    // margin-bottom: 10px;
+    // padding-bottom: 10px;
+    .lower-border{
+        border-right: 1px solid #4f4f4f;
+    }
+
+    .lower-tooth-left{
+        margin: 10px 0px;
+    }
+    .lower-tooth-right{
+        margin: 10px 0px;
+    }
+}

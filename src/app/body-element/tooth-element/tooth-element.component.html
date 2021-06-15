@@ -1,0 +1,40 @@
+<div class="p-shadow-2 p-m-2">
+<div class="upper-tooth">
+    <div  class="p-d-flex p-jc-center ">
+        <div *ngFor="let element of adult_tooth.reverse()" class="" [ngClass]="element === 1 ? 'upper-border': ''">
+                    <div class="upper-tooth-left">
+                        <img src="assets/tooth.jpg" alt='tooth' class="tooth-content-img">
+                        <span class="p-ml-2">1{{element}}</span>
+                    </div>
+        </div>
+        <div *ngFor="let element of adult_tooth.reverse()" >
+            <div class="upper-tooth-right">
+                   <img src="assets/tooth.jpg" alt='tooth' class="tooth-content-img">
+                <span class="p-ml-2">2{{element}}</span>
+            </div>
+</div>
+
+
+</div>
+</div>
+
+<div class="lower-tooth">
+    <div  class="p-d-flex p-jc-center">
+        <div *ngFor="let element of adult_tooth.reverse()" [ngClass]="element === 1 ? 'lower-border': ''">
+            <div class="lower-tooth-left">
+                <img src="assets/tooth.jpg" alt='tooth' class="tooth-content-img">
+                <span class="p-ml-2">3{{element}}</span>
+            </div>
+                   
+        </div>
+        <div *ngFor="let element of adult_tooth.reverse()">
+            <div class="lower-tooth-right">
+                <img src="assets/tooth.jpg" alt='tooth' class="tooth-content-img">
+            <span class="p-ml-2">4{{element}}</span>
+            </div>
+            
+    </div>
+        </div>
+</div>
+
+</div>
