@@ -1,16 +1,16 @@
-<div class="p-shadow-2 p-m-2">
+<div class="p-shadow-2 p-m-2" style="border-radius: 5px;">
 <div class="upper-tooth">
-    <div  class="p-d-flex p-jc-center ">
-        <div *ngFor="let element of adult_tooth.reverse()" class="" [ngClass]="element === 1 ? 'upper-border': ''">
-                    <div class="upper-tooth-left">
+    <div  class="p-d-flex p-jc-center">
+        <div *ngFor="let element of adult_tooth_upper_left.reverse()" class="" [ngClass]="{'upper-border': element === 11}" (click)="tooth_selection(element, 'upper-left')" >
+                    <div class="upper-tooth-left p-d-flex p-flex-column" [ngClass]="{'tab-active': tooths.includes(element)}">
                         <img src="assets/tooth.jpg" alt='tooth' class="tooth-content-img">
-                        <span class="p-ml-2">1{{element}}</span>
+                        <span class="">{{element}}</span>
                     </div>
         </div>
-        <div *ngFor="let element of adult_tooth.reverse()" >
-            <div class="upper-tooth-right">
+        <div *ngFor="let element of adult_tooth_upper_right" (click)="tooth_selection(element, 'upper-right')">
+            <div class="upper-tooth-right p-d-flex p-flex-column" [ngClass]="{'tab-active': tooths.includes(element)}">
                    <img src="assets/tooth.jpg" alt='tooth' class="tooth-content-img">
-                <span class="p-ml-2">2{{element}}</span>
+                <span class="">{{element}}</span>
             </div>
 </div>
 
@@ -20,17 +20,17 @@
 
 <div class="lower-tooth">
     <div  class="p-d-flex p-jc-center">
-        <div *ngFor="let element of adult_tooth.reverse()" [ngClass]="element === 1 ? 'lower-border': ''">
-            <div class="lower-tooth-left">
+        <div *ngFor="let element of adult_tooth_lower_left.reverse()" [ngClass]="element === 31 ? 'lower-border': ''" (click)="tooth_selection(element, 'lower-left')">
+            <div class="lower-tooth-left p-d-flex p-flex-column" [ngClass]="{'tab-active': tooths.includes(element)}">
                 <img src="assets/tooth.jpg" alt='tooth' class="tooth-content-img">
-                <span class="p-ml-2">3{{element}}</span>
+                <span class="">{{element}}</span>
             </div>
                    
         </div>
-        <div *ngFor="let element of adult_tooth.reverse()">
-            <div class="lower-tooth-right">
+        <div *ngFor="let element of adult_tooth_lower_right" (click)="tooth_selection(element, 'lower-right')">
+            <div class="lower-tooth-right p-d-flex p-flex-column" [ngClass]="{'tab-active': tooths.includes(element)}">
                 <img src="assets/tooth.jpg" alt='tooth' class="tooth-content-img">
-            <span class="p-ml-2">4{{element}}</span>
+            <span class="">{{element}}</span>
             </div>
             
     </div>

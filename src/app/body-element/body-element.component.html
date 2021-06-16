@@ -7,7 +7,24 @@
             </p-panel>
     
             <p-panel header="Selected tooth" styleClass="tooth-panel">
-                <app-selected-tooth></app-selected-tooth>
+                <div *ngIf='toothItems.length; else noElement'>
+                    <div class="p-grid">
+                    <div *ngFor="let items of toothItems" let i = index;>
+                           <div class="p-col-12 p-xl-12">
+                            <app-selected-tooth  [values]="items.tooth_number" ></app-selected-tooth>   
+                           </div>
+
+                       </div>
+                        
+                    </div>
+
+                </div>
+
+                <ng-template #noElement>
+                   <h4 class="p-text-center">No items.Please select tooth first</h4> 
+                  </ng-template>
+                
+               
     
             </p-panel>
         </p-fieldset> 

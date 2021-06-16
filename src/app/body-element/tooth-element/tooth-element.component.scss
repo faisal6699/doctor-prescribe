@@ -1,20 +1,32 @@
 .tooth-content-img{
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
 }
 
 .upper-tooth{
     border-bottom: 1px solid #4f4f4f;
     // margin-bottom: 10px;
     // padding-bottom: 10px;
+    transition: 1s;
     .upper-border{
         border-right: 1px solid #4f4f4f;
     }
     .upper-tooth-left{
-        margin: 10px 0px;
+        margin: 10px 5px;
+        span{
+            font-size: 1rem;
+        }
+    }
+
+    .upper-tooth-left:hover, .upper-tooth-right:hover{
+        background-color: #673AB7;
+        cursor: pointer;
     }
     .upper-tooth-right{
-        margin: 10px 0px;
+        margin: 10px 5px;
+        span{
+            font-size: 1rem;
+        }
     }
 }
 
@@ -27,9 +39,24 @@
     }
 
     .lower-tooth-left{
-        margin: 10px 0px;
+        margin: 10px 5px;
+        span{
+            font-size: 1rem;
+        }
     }
     .lower-tooth-right{
-        margin: 10px 0px;
+        margin: 10px 5px;
+        span{
+            font-size: 1rem;
+        }
+    }
+
+    .lower-tooth-left:hover, .lower-tooth-right:hover{
+        background-color: #673AB7;
+        cursor: pointer;
     }
 }
+.tab-active{
+    background-color: #673AB7;
+}
+

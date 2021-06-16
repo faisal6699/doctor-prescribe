@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { ValueTransformer } from '@angular/compiler/src/util';
+import { Component, Injectable, Input, OnInit } from '@angular/core';
+import { Tooth } from 'src/app/tooth.model';
+import { ToothService } from 'src/app/tooth.service';
+
+
+
 
 @Component({
   selector: 'app-selected-tooth',
@@ -7,12 +13,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SelectedToothComponent implements OnInit {
 
-  prbType: any[] = [{name: 'Fixed restorations'}, {name: 'Removable restorations'}, {name: 'Both restorations'}, {name: 'Others'}]
-  selectedPrb: string = ""
 
-  constructor() { }
+  @Input()  values: number = 0
+ 
 
-  ngOnInit(): void {
+  selected_value: number 
+
+
+
+  constructor(private toothService: ToothService) { }
+
+
+  ngOnInit() {
+  
+
+    
   }
+
+  // handleSelected(){
+  //   this.toothMarked = this.values
+  // }
+
+  // ngOnDestroy(): void{
+  //   this.toothSub.unsubscribe()
+  // }
 
 }
