@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 import { ToothService } from '../tooth.service';
 
 @Component({
@@ -10,8 +10,10 @@ export class BodyElementComponent implements OnInit {
 
   active: number
   toothItems: any[] = []
+  private el: ElementRef
+ 
   // tooth_marked: number
-  constructor(private toothService: ToothService) { }
+  constructor(private toothService: ToothService, private renderer: Renderer2) { }
 
   ngOnInit(): void {
     this.toothService.toothselecteditems.subscribe(items =>{
@@ -23,11 +25,21 @@ export class BodyElementComponent implements OnInit {
     }
 
     
-
+    console.log(this.el)
     // this.toothService.selectedTooth.subscribe(element => {
     //   console.log(element)
     //   this.tooth_marked = element.tooth_number
     // })
   }
+
+  changeItem(event: Event){
+    console.log(event)
+
+    // this.renderer.addClass(event.target, 'p-shadow-2')
+  }
+
+
+
+  
 
 }

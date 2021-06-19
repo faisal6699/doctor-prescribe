@@ -1,0 +1,36 @@
+<div class="p-container complain-form">
+
+    <form (ngSubmit)="onSubmit()" [formGroup]="dataForm">
+        <div class="p-grid">
+            <div class="p-col-12 complain-form-add">
+                <input type="text" pInputText id="complainName" formControlName="complainName" class="form-control" />
+                <button pButton type="button" label="add complain" styleClass="complain-add-button"
+                    (click)="addNewComplain()"></button>
+
+
+            </div>
+            <div *ngIf="products" class="p-col-12 complain-form-add">
+                <p-table [value]="products">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th>Vin</th>
+                            <th>Year</th>
+                            <th>Brand</th>
+                            <th>Color</th>
+                        </tr>
+                    </ng-template>
+                    <!-- <ng-template pTemplate="body" let-car>
+                    <tr>productd>
+                        <td>{{car.color}}</td>
+                    </tr>
+                </ng-template> -->
+                </p-table>
+            </div>
+
+            <hr>
+
+
+        </div>
+    </form>
+
+</div>

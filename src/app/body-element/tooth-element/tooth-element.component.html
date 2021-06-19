@@ -2,7 +2,7 @@
 <div class="upper-tooth">
     <div  class="p-d-flex p-jc-center">
         <div *ngFor="let element of adult_tooth_upper_left.reverse()" class="" [ngClass]="{'upper-border': element === 11}" (click)="tooth_selection(element, 'upper-left')" >
-                    <div class="upper-tooth-left p-d-flex p-flex-column" [ngClass]="{'tab-active': tooths.includes(element)}">
+                    <div class="upper-tooth-left p-d-flex p-flex-column " [ngClass]="{'tab-active': tooths.includes(element)}">
                         <img src="assets/tooth.jpg" alt='tooth' class="tooth-content-img">
                         <span class="">{{element}}</span>
                     </div>

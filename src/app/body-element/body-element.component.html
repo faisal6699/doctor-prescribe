@@ -1,16 +1,16 @@
 <div class="p-grid main-content">
-    <div class="p-col-12 p-xl-4">
+    <div class="p-col-12 p-xl-6">
         <p-fieldset legend="Problem selection">
             <p-panel header="Select tooth/teeth" styleClass="tooth-panel">
                 <app-tooth-element></app-tooth-element>
     
             </p-panel>
     
-            <p-panel header="Selected tooth" styleClass="tooth-panel">
+            <!-- <p-panel header="Selected tooth" styleClass="tooth-panel">
                 <div *ngIf='toothItems.length; else noElement'>
                     <div class="p-grid">
-                    <div *ngFor="let items of toothItems" let i = index;>
-                           <div class="p-col-12 p-xl-12">
+                    <div *ngFor="let items of toothItems;index as i"  class="p-m-1">
+                           <div class="p-col-12" [ngClass]="{'p-shadow-2':  i === (toothItems.length - 1)}" (click)="changeItem($event)"  >
                             <app-selected-tooth  [values]="items.tooth_number" ></app-selected-tooth>   
                            </div>
 
@@ -26,116 +26,12 @@
                 
                
     
-            </p-panel>
+            </p-panel> -->
         </p-fieldset> 
     </div>
 
-    <div class="p-col-12 p-xl-8">
-        <p-fieldset legend="Prescription">
-            <div class="p-grid">
-                <div class="p-col-12 p-xl-6">
-                    <p-panel header="Complaint" styleClass="tooth-panel">
-                        <ng-template pTemplate="icons">
-                            <p-button type="text" (click)="display = true" icon="pi pi-plus"></p-button>
-                            <p-sidebar [(visible)]="display" position="right">
-                                Content
-                            </p-sidebar>
-                        </ng-template>
-                        <div style="height: 7vh;">
-
-                        </div>
-                    </p-panel>
-
-                    <p-panel header="History" styleClass="tooth-panel">
-                        <ng-template pTemplate="icons">
-                            <p-button type="text" (click)="display = true" icon="pi pi-plus"></p-button>
-                            <p-sidebar [(visible)]="display" position="right">
-                                Content
-                            </p-sidebar>
-                        </ng-template>
-                        <div style="height: 7vh;">
-
-                        </div>
-                    </p-panel>
-
-                    <p-panel header="Findings" styleClass="tooth-panel">
-                        <ng-template pTemplate="icons">
-                            <p-button type="text" (click)="display = true" icon="pi pi-plus"></p-button>
-                            <p-sidebar [(visible)]="display" position="right">
-                                Content
-                            </p-sidebar>
-                        </ng-template>
-                        <div style="height: 7vh;">
-
-                        </div>
-                    </p-panel>
-
-                    <p-panel header="Investigation" styleClass="tooth-panel">
-                        <ng-template pTemplate="icons">
-                            <p-button type="text" (click)="display = true" icon="pi pi-plus"></p-button>
-                            <p-sidebar [(visible)]="display" position="right">
-                                Content
-                            </p-sidebar>
-                        </ng-template>
-                        <div style="height: 7vh;">
-
-                        </div>
-                    </p-panel>
-                </div>
-
-                <div class="p-col-12 p-xl-6">
-                    <p-panel header="Medication" styleClass="tooth-panel">
-                        <ng-template pTemplate="icons">
-                            <p-button type="text" (click)="display = true" icon="pi pi-plus"></p-button>
-                            <p-sidebar [(visible)]="display" position="right">
-                                Content
-                            </p-sidebar>
-                        </ng-template>
-                        <div style="height: 7vh;">
-
-                        </div>
-                    </p-panel>
-
-                    <p-panel header="Advance" styleClass="tooth-panel">
-                        <ng-template pTemplate="icons">
-                            <p-button type="text" (click)="display = true" icon="pi pi-plus"></p-button>
-                            <p-sidebar [(visible)]="display" position="right">
-                                Content
-                            </p-sidebar>
-                        </ng-template>
-                        <div style="height: 7vh;">
-
-                        </div>
-                    </p-panel>
-
-                    <p-panel header="Follow-up" styleClass="tooth-panel">
-                        <ng-template pTemplate="icons">
-                            <p-button type="text" (click)="display = true" icon="pi pi-plus"></p-button>
-                            <p-sidebar [(visible)]="display" position="right">
-                                Content
-                            </p-sidebar>
-                        </ng-template>
-                        <div style="height: 7vh;">
-
-                        </div>
-                    </p-panel>
-
-                    <p-panel header="Referral" styleClass="tooth-panel">
-                        <ng-template pTemplate="icons">
-                            <p-button type="text" (click)="display = true" icon="pi pi-plus"></p-button>
-                            <p-sidebar [(visible)]="display" position="right">
-                                Content
-                            </p-sidebar>
-                        </ng-template>
-                        <div style="height: 7vh;">
-
-                        </div>
-                    </p-panel>
-                </div>
-            </div>
-          
-
-        </p-fieldset>
+    <div class="p-col-12 p-xl-6">
+     <app-prescribe-element [prescribe_no] = "toothItems[toothItems.length - 1]"></app-prescribe-element>
     </div>
     
    </div>

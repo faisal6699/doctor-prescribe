@@ -1,0 +1,47 @@
+.complain-form{
+    .complain-form-add{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       input[type='text']{
+           width: 80%;
+           margin: 5px;
+           font-size: 1rem;
+
+       }
+
+       .p-button-label{
+        color: #fff;
+       }
+
+    }
+    
+    .complain-list{
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // width: 80%;
+        background-color: rgb(103,58,183);
+        
+    }
+
+    .p-datatable .p-datatable-thead > tr > th{
+        background: none;
+        color: #fff;
+    }
+
+    .ng-star-inserted{
+        background-color: rgb(103,58,183);
+        
+    }
+}
+
+
+
+// :host {
+//     ::ng-deep .p-panel-header span {
+//         font-size: 1rem;
+//         color:white;
+
+//     }
+// }

@@ -1,0 +1,119 @@
+<p-fieldset legend="Prescription">
+    <div *ngIf="prescribe_no !== undefined; else noSelection">
+        <h4 class="p-text-center">
+            Prescription for your tooth no: {{prescribe_no.tooth_number}}
+        </h4>
+        <div class="p-grid">
+            <div class="p-col-12 p-xl-6">
+                <p-panel header="Complaint" styleClass="tooth-panel">
+                    <ng-template pTemplate="icons">
+                        <p-button type="text" (click)="handleContent()" icon="pi pi-plus"></p-button>
+                        <p-sidebar [(visible)]="showContent" styleClass="p-sidebar-lg" position="right">
+                             
+                            <app-prescribe-element-complaint></app-prescribe-element-complaint>
+                        </p-sidebar>
+
+                    </ng-template>
+                    <div style="height: 7vh;">
+    
+                    </div>
+                </p-panel>
+
+               
+    
+                <p-panel header="History" styleClass="tooth-panel">
+                    <ng-template pTemplate="icons">
+                        <p-button type="text" (click)="handleHistory()" icon="pi pi-plus"></p-button>
+                        <p-sidebar [(visible)]="showHistory" styleClass="p-sidebar-lg" position="right">
+                            Content
+                        </p-sidebar>
+                    </ng-template>
+                    <div style="height: 7vh;">
+    
+                    </div>
+                </p-panel>
+    
+                <p-panel header="Findings" styleClass="tooth-panel">
+                    <ng-template pTemplate="icons">
+                        <p-button type="text" (click)="handleFindings()" icon="pi pi-plus"></p-button>
+                        <p-sidebar [(visible)]="showFindings" styleClass="p-sidebar-lg" position="right">
+                            Content
+                        </p-sidebar>
+                    </ng-template>
+                    <div style="height: 7vh;">
+    
+                    </div>
+                </p-panel>
+    
+                <p-panel header="Investigation" styleClass="tooth-panel">
+                    <ng-template pTemplate="icons">
+                        <p-button type="text" (click)="handleInvestigation()" icon="pi pi-plus"></p-button>
+                        <p-sidebar [(visible)]="showInvestigation" styleClass="p-sidebar-lg" position="right">
+                            Content
+                        </p-sidebar>
+                    </ng-template>
+                    <div style="height: 7vh;">
+    
+                    </div>
+                </p-panel>
+            </div>
+    
+            <div class="p-col-12 p-xl-6">
+                <p-panel header="Medication" styleClass="tooth-panel">
+                    <ng-template pTemplate="icons">
+                        <p-button type="text" (click)="handleMedication()" icon="pi pi-plus"></p-button>
+                        <p-sidebar [(visible)]="showMedication" styleClass="p-sidebar-lg" position="right">
+                            Content
+                        </p-sidebar>
+                    </ng-template>
+                    <div style="height: 7vh;">
+    
+                    </div>
+                </p-panel>
+    
+                <p-panel header="Advice" styleClass="tooth-panel">
+                    <ng-template pTemplate="icons">
+                        <p-button type="text" (click)="handleAdvice()" icon="pi pi-plus"></p-button>
+                        <p-sidebar [(visible)]="showAdvice" styleClass="p-sidebar-lg" position="right">
+                            Content
+                        </p-sidebar>
+                    </ng-template>
+                    <div style="height: 7vh;">
+    
+                    </div>
+                </p-panel>
+    
+                <p-panel header="Follow-up" styleClass="tooth-panel">
+                    <ng-template pTemplate="icons">
+                        <p-button type="text" (click)="handleFollowUp()" icon="pi pi-plus"></p-button>
+                        <p-sidebar [(visible)]="showFollowUp" styleClass="p-sidebar-lg" position="right">
+                            Content
+                        </p-sidebar>
+                    </ng-template>
+                    <div style="height: 7vh;">
+    
+                    </div>
+                </p-panel>
+    
+                <p-panel header="Referral" styleClass="tooth-panel">
+                    <ng-template pTemplate="icons">
+                        <p-button type="text" (click)="handleReferral()" icon="pi pi-plus"></p-button>
+                        <p-sidebar [(visible)]="showReferral" styleClass="p-sidebar-lg" position="right">
+                            Content
+                        </p-sidebar>
+                    </ng-template>
+                    <div style="height: 7vh;">
+    
+                    </div>
+                </p-panel>
+            </div>
+        </div>
+    </div>
+
+    <ng-template #noSelection>
+        <h4 class="p-text-center">Select a tooth</h4>
+    </ng-template>
+    
+  
+
+</p-fieldset>
