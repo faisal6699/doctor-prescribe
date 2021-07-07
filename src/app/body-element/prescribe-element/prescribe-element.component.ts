@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ToothProblemService } from 'src/app/tooth-problem.service';
 
 @Component({
   selector: 'app-prescribe-element',
@@ -18,11 +19,18 @@ export class PrescribeElementComponent implements OnInit {
   showFollowUp: boolean = false
   showReferral: boolean = false
 
+
+  toothComplains: any[]
   
-  constructor() { }
+  constructor(private toothProblemService: ToothProblemService) { }
 
   ngOnInit(): void {
+    this.toothProblemService.toothComplains.subscribe(val =>{
+      this.toothComplains = val
+      console.log(this.toothComplains)
+    })
 
+    
 
   }
 

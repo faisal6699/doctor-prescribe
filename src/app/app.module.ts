@@ -20,6 +20,7 @@ import {SidebarModule} from 'primeng/sidebar';
 import { PrescribeElementComponent } from './body-element/prescribe-element/prescribe-element.component';
 import { PrescribeElementComplaintComponent } from './body-element/prescribe-element/prescribe-element-complaint/prescribe-element-complaint.component';
 import {TableModule} from 'primeng/table';
+import {InputNumberModule} from 'primeng/inputnumber';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import {TableModule} from 'primeng/table';
     MultiSelectModule,
     PanelModule,
     SidebarModule,
-    TableModule
+    TableModule,
+    InputNumberModule
   ],
   providers: [],
   bootstrap: [AppComponent]
